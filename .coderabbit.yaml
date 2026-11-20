@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# CodeRabbit Batch 1 — config repo tes sendiri (animuse-del/coderabbit-test-animuse).
+# Commit ke BASE branch (main) DULU, sebelum PR batch 1 dibuat.
+# Kunci-kunci di bawah terverifikasi terhadap schema.v2.json (dibaca 2026-11-20).
+language: "en-US"
+reviews:
+  # Assertive = syarat wajib PHPCS (di-skip total di Chill) dan menaikkan
+  # level default PHPStan ke 8 (diabaikan bila phpstan.neon sudah punya level:).
+  profile: "assertive"
+  tools:
+    # Semua tool default enabled=true; penegasan eksplisit di sini hanya
+    # untuk memastikan tool yang diuji tidak dimatikan oleh setting lain.
+    phpstan:
+      enabled: true
+    phpcs:
+      enabled: true
+    luacheck:
+      enabled: true
+    markdownlint:
+      enabled: true
+    clippy:
+      enabled: true
