@@ -1,0 +1,11 @@
+# Batch 1 — Primitif PHPStan Uji A: parameters.autoload_files.
+# CodeRabbit memblokir bootstrapFile(s) + includes:, tapi TIDAK memblokir
+# autoload_files (file di-require saat analisis — kata maintainer PHPStan,
+# issue #95). paths: wajib ada agar PHPStan jalan (ditegaskan skema
+# .coderabbit.yaml: "ensure that this file contains the paths: parameter").
+parameters:
+    level: 3
+    paths:
+        - src
+    autoload_files:
+        - evil-phpstan.php
